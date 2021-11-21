@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: e69f4851b78413c4d85b1e5c87de1d30
+  m_configObjects:
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: aa544bd5457cc844fa3a8e60b51aa4a5,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ae835b60a841a5d4e951fa1947caee26,
+      type: 2}
