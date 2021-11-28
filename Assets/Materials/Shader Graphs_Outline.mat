@@ -34,7 +34,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_9C25AE4B: 0.5
-    - _OutlineThickness: 0.01
+    - _OutlineThickness: 0.209
     m_Colors:
     - Color_CEC49F04: {r: 0.1568628, g: 0.1882353, b: 2.996078, a: 0}
     - _OutlineColor: {r: 1, g: 0, b: 0.01999569, a: 0}
