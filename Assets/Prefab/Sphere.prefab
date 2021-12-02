@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 319290070982464599}
   - component: {fileID: 319290070982464592}
   - component: {fileID: 319290070982464595}
+  - component: {fileID: 7055103120657928086}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Ball
@@ -126,4 +127,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  work: 0
+--- !u!114 &7055103120657928086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319290070982464598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f552ae931279146ae4aa6c9a0cf9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

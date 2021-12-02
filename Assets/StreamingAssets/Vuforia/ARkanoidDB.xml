@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="qr-code4" size="5.000000 5.000000" />
+    <ImageTarget name="ra-code" size="5.000000 5.000000" />
+    <ImageTarget name="playerprueba" size="2.000000 2.000000" />
+    <ImageTarget name="Player" size="5.000000 2.490272" />
     <ImageTarget name="player2" size="1.000000 0.213787" />
     <ImageTarget name="player1" size="1.000000 0.240876" />
     <ImageTarget name="map" size="5.000000 5.000000" />
