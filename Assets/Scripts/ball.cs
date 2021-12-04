@@ -7,12 +7,13 @@ public class ball : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 5.0f;
+    public float speed = 25.0f;
     private Rigidbody rb;
     private  Vector3 oldVelocity;
 
     void Start()
     {
+        transform.localPosition = new Vector3(0, 2, 15);
         rb = GetComponent<Rigidbody>();
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float z = -1;
