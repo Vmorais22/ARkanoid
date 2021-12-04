@@ -32,10 +32,12 @@ public class ball : MonoBehaviour
         //else works normal
         else if (GameObject.Find("MapImageTarget").GetComponent<mapBehavior>().work) 
         {
-            
-            if (rb.velocity == new Vector3(0.0f, 0.0f, 0.0f)) {
+
+            if (rb.velocity == new Vector3(0.0f, 0.0f, 0.0f))
+            {
                 rb.velocity = oldVelocity;
             }
+            else rb.velocity = rb.velocity.normalized * speed;
         }
        
     }
