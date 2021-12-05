@@ -8,6 +8,8 @@ TagManager:
   - ray
   - Bonus
   - BadBonus
+  - wall
+  - brick
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,8 @@ public class ball : MonoBehaviour
     public float speed = 25.0f;
     private Rigidbody rb;
     private  Vector3 oldVelocity;
+    public AudioClip wall;
+    public AudioClip brick;
 
     void Start()
     {
@@ -43,4 +45,17 @@ public class ball : MonoBehaviour
        
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.transform.tag == "wall")
+        {
+            GetComponent<AudioSource>().clip = wall;
+            GetComponent<AudioSource>().Play();
+        }
+        if (collision.collider.transform.tag == "brick")
+        {
+            GetComponent<AudioSource>().clip = brick;
+            GetComponent<AudioSource>().Play();
+        }
+    }          
 }

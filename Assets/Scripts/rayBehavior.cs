@@ -5,8 +5,9 @@ public class rayBehavior : MonoBehaviour
 
     public GameObject ball;
     private Transform parent;
-    private float targetTime = 5.0f;
+    private float targetTime = 3.0f;
     private bool timerEnabled = false;
+    public AudioClip death;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class rayBehavior : MonoBehaviour
             if (targetTime <= 0.0f)
             {
                 timerEnabled = false;
-                targetTime = 5.0f;
+                targetTime = 3.0f;
                 GameObject newBall = Instantiate(ball, parent);
                 newBall.name = "Sphere";
             }
@@ -38,7 +39,9 @@ public class rayBehavior : MonoBehaviour
                 timerEnabled = true;
                 parent = transform.parent;
             }
-                Destroy(other.gameObject);
+            GetComponent<AudioSource>().clip = death;
+            GetComponent<AudioSource>().Play();
+            Destroy(other.gameObject);
             
 
         }
