@@ -16,6 +16,8 @@ public class mapBehavior : MonoBehaviour
     private GameObject actualBonus;
     public GameObject player;
     private int bonusId;
+    private bool music = false;
+    private bool musicRunning = false;
 
     void Start()
     {
@@ -27,6 +29,10 @@ public class mapBehavior : MonoBehaviour
     {
         if(work)
         {
+            if(!GetComponentInParent<AudioSource>().isPlaying)
+            {
+                GetComponentInParent<AudioSource>().Play();
+            }
             if (!spawnedBonus)
             {
                 respawnTime -= Time.deltaTime;
@@ -61,6 +67,13 @@ public class mapBehavior : MonoBehaviour
                 }
 
 
+            }
+        }
+        else
+        {
+            if (GetComponentInParent<AudioSource>().isPlaying)
+            {
+                GetComponentInParent<AudioSource>().Pause();
             }
         }
 
