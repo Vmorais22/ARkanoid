@@ -13,7 +13,8 @@ public class mapBehavior : MonoBehaviour
     public bool bonusCaught = false;
     public GameObject[] randomBonus;
     public Transform parent;
-    GameObject actualBonus;
+    private GameObject actualBonus;
+    public GameObject player;
     private int bonusId;
 
     void Start()
@@ -32,7 +33,8 @@ public class mapBehavior : MonoBehaviour
 
                 if (respawnTime <= 0.0f)
                 {
-                    bonusId = 3;
+                    bonusId = Random.Range(0,7);
+                    //bonusId = 4;
                     insertBonus();
                     actualBonus.transform.position = new Vector3(Random.Range(-10.0f, 10.0f), 2, Random.Range(0.0f, 30.0f));
                 }
@@ -60,7 +62,6 @@ public class mapBehavior : MonoBehaviour
 
 
             }
-
         }
 
     }
@@ -73,7 +74,8 @@ public class mapBehavior : MonoBehaviour
                 print("+1 vida al jugador");
                 break;
             case 1:
-                GameObject.Find("Sphere(Clone)").GetComponent<ball>().speed *= 2;
+                //acelera la pelota
+                GameObject.Find("Sphere").GetComponent<ball>().speed *= 2;
                 break;
             case 2:
                 print("aumenta los puntos del jugador");
@@ -82,10 +84,23 @@ public class mapBehavior : MonoBehaviour
                 print("smooth move rayo y margen para arriba");
                 break;
             case 4:
-                print("algo super random (rota el mapa? aparecen cubos? más de una pelota?"); //podemos sacar mas ideas de aqui o cambiarlos xd.
+                //triplica el player
+                GameObject copy1 = Instantiate(player) as GameObject;
+                copy1.name = "copy1";
+                copy1.transform.tag = "Ball";
+                GameObject copy2 = Instantiate(player) as GameObject;
+                copy2.name = "copy2";
+                copy2.transform.tag = "Ball";
                 break;
             case 5:
-                GameObject.Find("Sphere(Clone)").GetComponent<ball>().speed /= 2;
+                //ralentiza la pelota
+                GameObject.Find("Sphere").GetComponent<ball>().speed /= 2;
+                break;
+            case 6:
+                print("animación reducir longitud pala player");
+                break;
+            case 7:
+                print("animación aumentar long pala player");
                 break;
         }
 

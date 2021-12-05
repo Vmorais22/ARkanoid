@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class rayBehavior : MonoBehaviour
 {
 
     public GameObject ball;
-    public Transform parent;
+    private Transform parent;
     private float targetTime = 5.0f;
     private bool timerEnabled = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -25,7 +23,8 @@ public class rayBehavior : MonoBehaviour
             {
                 timerEnabled = false;
                 targetTime = 5.0f;
-                Instantiate(ball, parent);
+                GameObject newBall = Instantiate(ball, parent);
+                newBall.name = "Sphere";
             }
     }
 }
@@ -34,8 +33,13 @@ public class rayBehavior : MonoBehaviour
     {
         if (other.transform.CompareTag("Ball"))
         {
-            Destroy(other.gameObject);
-            timerEnabled = true;
+            if (other.name == "Sphere")
+            {
+                timerEnabled = true;
+                parent = transform.parent;
+            }
+                Destroy(other.gameObject);
+            
 
         }
 
