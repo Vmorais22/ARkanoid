@@ -12,6 +12,7 @@ public class ball : MonoBehaviour
     private  Vector3 oldVelocity;
     public AudioClip wall;
     public AudioClip brick;
+    public bool mute = false;
 
     void Start()
     {
@@ -47,15 +48,18 @@ public class ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.transform.tag == "wall")
+        if (!mute)
         {
-            GetComponent<AudioSource>().clip = wall;
-            GetComponent<AudioSource>().Play();
-        }
-        if (collision.collider.transform.tag == "brick")
-        {
-            GetComponent<AudioSource>().clip = brick;
-            GetComponent<AudioSource>().Play();
+            if (collision.collider.transform.tag == "wall")
+            {
+                GetComponent<AudioSource>().clip = wall;
+                GetComponent<AudioSource>().Play();
+            }
+            if (collision.collider.transform.tag == "brick")
+            {
+                GetComponent<AudioSource>().clip = brick;
+                GetComponent<AudioSource>().Play();
+            }
         }
     }          
 }
