@@ -7,12 +7,13 @@ public class ball : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 25.0f;
+    public float speed;
     private Rigidbody rb;
     private  Vector3 oldVelocity;
     public AudioClip wall;
     public AudioClip brick;
-    public bool mute = false;
+    public bool mute;
+    public float volume;
 
     void Start()
     {
@@ -27,6 +28,9 @@ public class ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = GameObject.Find("MenuController").GetComponent<MenuController>().speed;
+        volume = GameObject.Find("MenuController").GetComponent<MenuController>().volume;
+        mute = GameObject.Find("MenuController").GetComponent<MenuController>().mute;
         //Game paused when QR not visible
         if (!GameObject.Find("MapImageTarget").GetComponent<mapBehavior>().work && rb.velocity != new Vector3(0.0f, 0.0f, 0.0f))
         {
@@ -53,11 +57,13 @@ public class ball : MonoBehaviour
             if (collision.collider.transform.tag == "wall")
             {
                 GetComponent<AudioSource>().clip = wall;
+                GetComponent<AudioSource>().volume = volume;
                 GetComponent<AudioSource>().Play();
             }
             if (collision.collider.transform.tag == "brick")
             {
                 GetComponent<AudioSource>().clip = brick;
+                GetComponent<AudioSource>().volume = volume;
                 GetComponent<AudioSource>().Play();
             }
         }

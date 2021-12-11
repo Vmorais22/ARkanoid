@@ -85,17 +85,18 @@ public class mapBehavior3 : MonoBehaviour
         switch (bonusId)
         {
             case 0:
-                print("+1 vida al jugador");
+                GameObject.Find("MenuController").GetComponent<MenuController>().GainHeart();
                 break;
             case 1:
                 //acelera la pelota
                 GameObject.Find("Sphere3").GetComponent<ball3>().speed *= 2;
                 break;
             case 2:
-                print("aumenta los puntos del jugador");
+                GameObject.Find("MenuController").GetComponent<MenuController>().UpdatePointsBonus();
                 break;
             case 3:
-                print("smooth move rayo y margen para arriba");
+                GameObject.Find("rayo").GetComponent<Animation>().Play("RayoMapa3");
+                GameObject.Find("margen").GetComponent<Animation>().Play("MargenMapa3");
                 break;
             case 4:
                 //triplica el player

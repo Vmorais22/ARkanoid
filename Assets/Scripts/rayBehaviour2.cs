@@ -9,6 +9,10 @@ public class rayBehaviour2 : MonoBehaviour
     private float targetTime = 3.0f;
     private bool timerEnabled = false;
     public AudioClip death;
+
+    public bool mute;
+    public float volume;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,9 @@ public class rayBehaviour2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        volume = GameObject.Find("MenuController").GetComponent<MenuController>().volume;
+        mute = GameObject.Find("MenuController").GetComponent<MenuController>().mute;
+
         if (GameObject.Find("MapImageTarget2").GetComponent<mapBehaviour2>().work)
         {
             if (timerEnabled)
@@ -43,9 +50,14 @@ public class rayBehaviour2 : MonoBehaviour
             {
                 timerEnabled = true;
                 parent = transform.parent;
+                GameObject.Find("MenuController").GetComponent<MenuController>().LoseHeart();
             }
-            GetComponent<AudioSource>().clip = death;
-            GetComponent<AudioSource>().Play();
+            if (!mute)
+            {
+                GetComponent<AudioSource>().clip = death;
+                GetComponent<AudioSource>().volume = volume;
+                GetComponent<AudioSource>().Play();
+            }
             Destroy(other.gameObject);
 
 

@@ -21,6 +21,7 @@ public class brick : MonoBehaviour
         if (collision.transform.CompareTag("Ball"))
         {
             Destroy(gameObject);
+            GameObject.Find("MenuController").GetComponent<MenuController>().UpdatePointsBrick();
         }
     }
 
