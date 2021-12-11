@@ -17,15 +17,18 @@ public class rayBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerEnabled)
+        if (GameObject.Find("MapImageTarget").GetComponent<mapBehavior>().work)
         {
-            targetTime -= Time.deltaTime;
-            if (targetTime <= 0.0f)
+            if (timerEnabled)
             {
-                timerEnabled = false;
-                targetTime = 3.0f;
-                GameObject newBall = Instantiate(ball, parent);
-                newBall.name = "Sphere";
+                targetTime -= Time.deltaTime;
+                if (targetTime <= 0.0f)
+                {
+                    timerEnabled = false;
+                    targetTime = 3.0f;
+                    GameObject newBall = Instantiate(ball, parent);
+                    newBall.name = "Sphere";
+                }
             }
     }
 }

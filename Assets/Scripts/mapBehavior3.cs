@@ -40,7 +40,7 @@ public class mapBehavior3 : MonoBehaviour
                 {
                     bonusId = Random.Range(0, 7);
                     insertBonus();
-                    actualBonus.transform.position = new Vector3(transform.position.x + Random.Range(-10.0f, 10.0f), 2, transform.position.z + Random.Range(0.0f, 30.0f));
+                    actualBonus.transform.position = new Vector3(transform.position.x + Random.Range(-10.0f, 10.0f), transform.position.y + 2.0f, transform.position.z + Random.Range(0.0f, 30.0f));
                 }
             }
             else

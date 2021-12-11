@@ -18,17 +18,21 @@ public class rayBehaviour2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerEnabled)
+        if (GameObject.Find("MapImageTarget2").GetComponent<mapBehaviour2>().work)
         {
-            targetTime -= Time.deltaTime;
-            if (targetTime <= 0.0f)
+            if (timerEnabled)
             {
-                timerEnabled = false;
-                targetTime = 3.0f;
-                GameObject newBall = Instantiate(ball, parent);
-                newBall.name = "Sphere2";
+                targetTime -= Time.deltaTime;
+                if (targetTime <= 0.0f)
+                {
+                    timerEnabled = false;
+                    targetTime = 3.0f;
+                    GameObject newBall = Instantiate(ball, parent);
+                    newBall.name = "Sphere2";
+                }
             }
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)

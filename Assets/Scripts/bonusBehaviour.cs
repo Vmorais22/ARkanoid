@@ -7,7 +7,7 @@ public class bonusBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        transform.parent.localPosition = new Vector3(transform.parent.localPosition.x, 2.0f, transform.parent.localPosition.z);
+        transform.parent.localPosition = new Vector3(transform.parent.localPosition.x, transform.parent.localPosition.y, transform.parent.localPosition.z);
     }
     private void OnTriggerEnter(Collider other)
     {

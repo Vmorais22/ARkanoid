@@ -15,7 +15,7 @@ public class ball3 : MonoBehaviour
 
     void Start()
     {
-        transform.localPosition = new Vector3(0, 2, 20);
+        transform.localPosition = new Vector3(5, 2, 37);
         rb = GetComponent<Rigidbody>();
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float z = -1;
