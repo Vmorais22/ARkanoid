@@ -18,6 +18,8 @@ public class mapBehavior : MonoBehaviour
     private int bonusId;
     private bool music = false;
     private bool musicRunning = false;
+    private float longitudPlayer = 10.0f;
+
 
     void Start()
     {
@@ -41,7 +43,8 @@ public class mapBehavior : MonoBehaviour
                 {
                     bonusId = Random.Range(0,7);
                     insertBonus();
-                    actualBonus.transform.position = new Vector3(transform.position.x + Random.Range(-10.0f, 10.0f), transform.position.y + 2.0f, transform.position.z + Random.Range(0.0f, 30.0f));
+                    Transform aux = GameObject.Find("bonus1").transform;
+                    actualBonus.transform.position = new Vector3(aux.position.x + Random.Range(-10.0f, 10.0f), aux.position.y + 2.0f, aux.position.z + Random.Range(0.0f, 30.0f));
                 }
             }
             else
@@ -109,10 +112,28 @@ public class mapBehavior : MonoBehaviour
                 GameObject.Find("Sphere").GetComponent<ball>().speed /= 2;
                 break;
             case 6:
-                print("animación reducir longitud pala player");
+                if (longitudPlayer == 10.0f)
+                {
+                    GameObject.Find("player").GetComponent<Animation>().Play("MasPequeño");
+                    longitudPlayer = 5.0f;
+                }
+                else if (longitudPlayer == 15.0f)
+                {
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
+                    longitudPlayer = 10.0f;
+                }
                 break;
             case 7:
-                print("animación aumentar long pala player");
+                if (longitudPlayer == 10.0f)
+                {
+                    GameObject.Find("player").GetComponent<Animation>().Play("MasGrande");
+                    longitudPlayer = 15.0f;
+                }
+                else if (longitudPlayer == 5.0f)
+                {
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
+                    longitudPlayer = 10.0f;
+                }
                 break;
         }
 
