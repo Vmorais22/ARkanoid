@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108172, guid: c075044e26e704b4abac38622079f91f, type: 3}
       propertyPath: m_Name
-      value: Battery Green
+      value: bonus2
       objectReference: {fileID: 0}
     - target: {fileID: 408172, guid: c075044e26e704b4abac38622079f91f, type: 3}
       propertyPath: m_RootOrder
@@ -70,6 +70,22 @@ PrefabInstance:
     - target: {fileID: 408172, guid: c075044e26e704b4abac38622079f91f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808172, guid: c075044e26e704b4abac38622079f91f, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808172, guid: c075044e26e704b4abac38622079f91f, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808172, guid: c075044e26e704b4abac38622079f91f, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19808172, guid: c075044e26e704b4abac38622079f91f, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c075044e26e704b4abac38622079f91f, type: 3}

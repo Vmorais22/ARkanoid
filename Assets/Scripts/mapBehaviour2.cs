@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mapBehavior : MonoBehaviour
+public class mapBehaviour2 : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -27,9 +27,9 @@ public class mapBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(work)
+        if (work)
         {
-            if(!GetComponentInParent<AudioSource>().isPlaying)
+            if (!GetComponentInParent<AudioSource>().isPlaying)
             {
                 GetComponentInParent<AudioSource>().Play();
             }
@@ -98,10 +98,10 @@ public class mapBehavior : MonoBehaviour
                 break;
             case 4:
                 //triplica el player
-                GameObject copy1 = Instantiate(player,parent) as GameObject;
+                GameObject copy1 = Instantiate(player, parent) as GameObject;
                 copy1.name = "copy1";
                 copy1.transform.tag = "Ball";
-                GameObject copy2 = Instantiate(player,parent) as GameObject;
+                GameObject copy2 = Instantiate(player, parent) as GameObject;
                 copy2.name = "copy2";
                 copy2.transform.tag = "Ball";
                 break;

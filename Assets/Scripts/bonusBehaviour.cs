@@ -11,6 +11,7 @@ public class bonusBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("MapImageTarget").GetComponent<mapBehavior>().bonusCaught = true;
+        if(other.transform.name == "Sphere") GameObject.Find("MapImageTarget").GetComponent<mapBehavior>().bonusCaught = true;
+        if(other.transform.name == "Sphere2") GameObject.Find("MapImageTarget2").GetComponent<mapBehaviour2>().bonusCaught = true;
     }
 }
