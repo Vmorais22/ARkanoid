@@ -29,9 +29,9 @@ public class mapBehaviour2 : MonoBehaviour
     {
         if (work)
         {
-            if (!GetComponentInParent<AudioSource>().isPlaying)
+            if (!GetComponent<AudioSource>().isPlaying)
             {
-                GetComponentInParent<AudioSource>().Play();
+                GetComponent<AudioSource>().Play();
             }
             if (!spawnedBonus)
             {
@@ -39,8 +39,7 @@ public class mapBehaviour2 : MonoBehaviour
 
                 if (respawnTime <= 0.0f)
                 {
-                    //bonusId = Random.Range(0,7);
-                    bonusId = 4;
+                    bonusId = Random.Range(0,7);
                     insertBonus();
                     actualBonus.transform.position = new Vector3(transform.position.x + Random.Range(-10.0f, 10.0f), 2, transform.position.z + Random.Range(0.0f, 30.0f));
                 }
@@ -71,9 +70,9 @@ public class mapBehaviour2 : MonoBehaviour
         }
         else
         {
-            if (GetComponentInParent<AudioSource>().isPlaying)
+            if (GetComponent<AudioSource>().isPlaying)
             {
-                GetComponentInParent<AudioSource>().Pause();
+                GetComponent<AudioSource>().Pause();
             }
         }
 
@@ -88,7 +87,7 @@ public class mapBehaviour2 : MonoBehaviour
                 break;
             case 1:
                 //acelera la pelota
-                GameObject.Find("Sphere").GetComponent<ball>().speed *= 2;
+                GameObject.Find("Sphere2").GetComponent<ball>().speed *= 2;
                 break;
             case 2:
                 print("aumenta los puntos del jugador");
@@ -107,7 +106,7 @@ public class mapBehaviour2 : MonoBehaviour
                 break;
             case 5:
                 //ralentiza la pelota
-                GameObject.Find("Sphere").GetComponent<ball>().speed /= 2;
+                GameObject.Find("Sphere2").GetComponent<ball>().speed /= 2;
                 break;
             case 6:
                 print("animación reducir longitud pala player");

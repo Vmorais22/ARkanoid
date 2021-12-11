@@ -29,9 +29,9 @@ public class mapBehavior : MonoBehaviour
     {
         if(work)
         {
-            if(!GetComponentInParent<AudioSource>().isPlaying)
+            if(!GetComponent<AudioSource>().isPlaying)
             {
-                GetComponentInParent<AudioSource>().Play();
+                GetComponent<AudioSource>().Play();
             }
             if (!spawnedBonus)
             {
@@ -39,8 +39,7 @@ public class mapBehavior : MonoBehaviour
 
                 if (respawnTime <= 0.0f)
                 {
-                    //bonusId = Random.Range(0,7);
-                    bonusId = 4;
+                    bonusId = Random.Range(0,7);
                     insertBonus();
                     actualBonus.transform.position = new Vector3(transform.position.x + Random.Range(-10.0f, 10.0f), 2, transform.position.z + Random.Range(0.0f, 30.0f));
                 }
@@ -71,9 +70,9 @@ public class mapBehavior : MonoBehaviour
         }
         else
         {
-            if (GetComponentInParent<AudioSource>().isPlaying)
+            if (GetComponent<AudioSource>().isPlaying)
             {
-                GetComponentInParent<AudioSource>().Pause();
+                GetComponent<AudioSource>().Pause();
             }
         }
 

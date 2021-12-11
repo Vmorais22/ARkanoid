@@ -13,5 +13,6 @@ public class bonusBehaviour : MonoBehaviour
     {
         if(other.transform.name == "Sphere") GameObject.Find("MapImageTarget").GetComponent<mapBehavior>().bonusCaught = true;
         if(other.transform.name == "Sphere2") GameObject.Find("MapImageTarget2").GetComponent<mapBehaviour2>().bonusCaught = true;
+        if(other.transform.name == "Sphere3") GameObject.Find("MapImageTarget3").GetComponent<mapBehavior3>().bonusCaught = true;
     }
 }
