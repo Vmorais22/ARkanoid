@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114048, guid: b807bdf1d70be874780b26b77028a3ad, type: 3}
       propertyPath: m_Name
-      value: Moneybag
+      value: bonus3
       objectReference: {fileID: 0}
     - target: {fileID: 114050, guid: b807bdf1d70be874780b26b77028a3ad, type: 3}
       propertyPath: m_TagString
@@ -73,12 +73,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b807bdf1d70be874780b26b77028a3ad, type: 3}
+--- !u!1 &7217657624450713825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 114048, guid: b807bdf1d70be874780b26b77028a3ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 7217657624450823521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7217657624450713827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 114050, guid: b807bdf1d70be874780b26b77028a3ad,
     type: 3}
   m_PrefabInstance: {fileID: 7217657624450823521}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2640156031046177674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217657624450713825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f552ae931279146ae4aa6c9a0cf9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1036598419
 BoxCollider:
   m_ObjectHideFlags: 0

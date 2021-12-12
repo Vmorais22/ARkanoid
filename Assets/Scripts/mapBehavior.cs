@@ -120,7 +120,7 @@ public class mapBehavior : MonoBehaviour
                 }
                 else if (longitudPlayer == 15.0f)
                 {
-                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
                     longitudPlayer = 10.0f;
                 }
                 break;
@@ -132,9 +132,10 @@ public class mapBehavior : MonoBehaviour
                 }
                 else if (longitudPlayer == 5.0f)
                 {
-                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
                     longitudPlayer = 10.0f;
                 }
+
                 break;
         }
 
@@ -143,7 +144,7 @@ public class mapBehavior : MonoBehaviour
     private void insertBonus()
     {
         actualBonus = Instantiate(randomBonus[bonusId]) as GameObject;
-        liveTime = 5.0f;
+        liveTime = 10.0f;
         spawnedBonus = true;
     }
 

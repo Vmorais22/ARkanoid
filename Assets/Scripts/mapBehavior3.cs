@@ -95,8 +95,8 @@ public class mapBehavior3 : MonoBehaviour
                 GameObject.Find("MenuController").GetComponent<MenuController>().UpdatePointsBonus();
                 break;
             case 3:
-                GameObject.Find("rayo").GetComponent<Animation>().Play("RayoMapa3");
-                GameObject.Find("margen").GetComponent<Animation>().Play("MargenMapa3");
+                GameObject.Find("rayo3").GetComponent<Animation>().Play("RayoMapa3");
+                GameObject.Find("margen3").GetComponent<Animation>().Play("MargenMapa3");
                 break;
             case 4:
                 //triplica el player
@@ -118,7 +118,7 @@ public class mapBehavior3 : MonoBehaviour
                 }
                 else if (longitudPlayer == 15.0f)
                 {
-                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
                     longitudPlayer = 10.0f;
                 }
                 break;
@@ -130,7 +130,7 @@ public class mapBehavior3 : MonoBehaviour
                 }
                 else if (longitudPlayer == 5.0f)
                 {
-                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
                     longitudPlayer = 10.0f;
                 }
                 break;
@@ -141,7 +141,7 @@ public class mapBehavior3 : MonoBehaviour
     private void insertBonus()
     {
         actualBonus = Instantiate(randomBonus[bonusId]) as GameObject;
-        liveTime = 5.0f;
+        liveTime = 10.0f;
         spawnedBonus = true;
     }
 

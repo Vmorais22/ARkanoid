@@ -95,7 +95,7 @@ public class MenuController : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);//prueba
     }
 

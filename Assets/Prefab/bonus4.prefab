@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190736, guid: 5ddcb8117c48d314badef2a8496a789d, type: 3}
       propertyPath: m_Name
-      value: Skull White
+      value: bonus4
       objectReference: {fileID: 0}
     - target: {fileID: 490736, guid: 5ddcb8117c48d314badef2a8496a789d, type: 3}
       propertyPath: m_RootOrder
@@ -73,6 +73,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ddcb8117c48d314badef2a8496a789d, type: 3}
+--- !u!1 &1542540487984525882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 190736, guid: 5ddcb8117c48d314badef2a8496a789d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1542540487984634666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1542540487984525860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 190734, guid: 5ddcb8117c48d314badef2a8496a789d,
@@ -102,5 +108,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ca797267ef17b649829613edf209ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6678828953287143829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542540487984525882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f552ae931279146ae4aa6c9a0cf9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

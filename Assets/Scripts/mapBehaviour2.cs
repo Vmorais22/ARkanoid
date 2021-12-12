@@ -29,7 +29,7 @@ public class mapBehaviour2 : MonoBehaviour
     void Update()
     {
         if (work)
-        {
+        { 
             if (!GetComponent<AudioSource>().isPlaying)
             {
                 GetComponent<AudioSource>().Play();
@@ -95,8 +95,8 @@ public class mapBehaviour2 : MonoBehaviour
                 GameObject.Find("MenuController").GetComponent<MenuController>().UpdatePointsBonus();
                 break;
             case 3:
-                GameObject.Find("rayo").GetComponent<Animation>().Play("RayoMapa2");
-                GameObject.Find("margen").GetComponent<Animation>().Play("MargenMapa2");
+                GameObject.Find("rayo2").GetComponent<Animation>().Play("RayoMapa2");
+                GameObject.Find("margen2").GetComponent<Animation>().Play("MargenMapa2");
                 break;
             case 4:
                 //triplica el player
@@ -119,8 +119,8 @@ public class mapBehaviour2 : MonoBehaviour
                 }
                 else if(longitudPlayer == 15.0f)
                 {
-                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
-                    longitudPlayer = 10.0f;
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
+                     longitudPlayer = 10.0f;
                 }
                 break;
             case 7:
@@ -131,7 +131,7 @@ public class mapBehaviour2 : MonoBehaviour
                 }
                 else if (longitudPlayer == 5.0f)
                 {
-                    GameObject.Find("player").GetComponent<Animation>().Play("MenosGrande");
+                    GameObject.Find("player").GetComponent<Animation>().Play("MenosPequeño");
                     longitudPlayer = 10.0f;
                 }
  
@@ -143,7 +143,7 @@ public class mapBehaviour2 : MonoBehaviour
     private void insertBonus()
     {
         actualBonus = Instantiate(randomBonus[bonusId]) as GameObject;
-        liveTime = 5.0f;
+        liveTime = 10.0f;
         spawnedBonus = true;
     }
 
