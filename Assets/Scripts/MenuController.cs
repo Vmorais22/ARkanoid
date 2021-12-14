@@ -22,6 +22,8 @@ public class MenuController : MonoBehaviour
 
     private float points = 0f;
 
+    private bool invencible = false;
+
     public void OpenMenu()
     {
         Time.timeScale = 0f;
@@ -113,37 +115,45 @@ public class MenuController : MonoBehaviour
         GameObject.Find("Points").GetComponent<Text>().text = points.ToString();
     }
 
+    public void UpdateInvencible(bool value)
+    {
+        invencible = value;
+    }
+
     public void LoseHeart()
     {
-        if (heart4)
+        if (!invencible)
         {
-            heart4 = false;
-            GameObject.Find("Heart4").SetActive(false);
-        }
-        else if (heart3)
-        {
-            heart3 = false;
-            GameObject.Find("Heart3").SetActive(false);
-        }
-        else if (heart2)
-        {
-            heart2 = false;
-            GameObject.Find("Heart2").SetActive(false);
-        }
-        else if (heart1)
-        {
-            heart1 = false;
-            GameObject.Find("Heart1").SetActive(false);
-        }
-        else if (heart)
-        {
-            heart = false;
-            GameObject.Find("Heart").SetActive(false);
-        }
-        else
-        {
-            Time.timeScale = 0f;
-            canvasdead.SetActive(true);
+            if (heart4)
+            {
+                heart4 = false;
+                GameObject.Find("Heart4").SetActive(false);
+            }
+            else if (heart3)
+            {
+                heart3 = false;
+                GameObject.Find("Heart3").SetActive(false);
+            }
+            else if (heart2)
+            {
+                heart2 = false;
+                GameObject.Find("Heart2").SetActive(false);
+            }
+            else if (heart1)
+            {
+                heart1 = false;
+                GameObject.Find("Heart1").SetActive(false);
+            }
+            else if (heart)
+            {
+                heart = false;
+                GameObject.Find("Heart").SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                canvasdead.SetActive(true);
+            }
         }
     }
 
